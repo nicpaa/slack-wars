@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS public."Question"
+(
+    question "char" NOT NULL,
+    answer "char" NOT NULL,
+    id "char" NOT NULL,
+    CONSTRAINT "QuestionAnswer_pkey" PRIMARY KEY (id)
+)
+
+CREATE TABLE IF NOT EXISTS public."Team"
+(
+    "teamName" "char",
+    users "char"[],
+    id "char" NOT NULL,
+    CONSTRAINT "Team_pkey" PRIMARY KEY (id)
+)
+
+CREATE TABLE IF NOT EXISTS public."User"
+(
+    name "char" NOT NULL,
+    "lastName" "char" NOT NULL,
+    id "char" NOT NULL,
+    "userToken" "char",
+    "teamId" "char",
+    "teamName" "char",
+    CONSTRAINT "User_pkey" PRIMARY KEY (id)
+)
